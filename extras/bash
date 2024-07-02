@@ -1,0 +1,4 @@
+mkdir -p ~/dockerfiles/ubuntu16.10
+mkdir -p ~/dockerfiles/ubuntu18.10
+mkdir -p ~/dockerfiles/ubuntu20.10
+mkdir -p ~/dockerfiles/ubuntu22.10
