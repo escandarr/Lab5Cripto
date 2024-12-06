@@ -11,11 +11,11 @@ RUN apt-get update && \
     apt-get install -y --fix-missing && \
     apt-get source openssh-client
 
-# Descargar y descomprimir el código fuente de OpenSSH
+# Descargar y descomprimir el código fuente de OpenSSH/ aca puedo cambiar la version
 RUN wget https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.9p1.tar.gz && \
     tar -xvzf openssh-8.9p1.tar.gz && \
     cd openssh-8.9p1 && \
-    sed -i 's/#define SSH_VERSION\t"OpenSSH_.*"/#define SSH_VERSION\t"OpenSSH_?"/' version.h && \
+    sed -i 's/#define SSH_VERSION\t"OpenSSH_.*"/#define SSH_VERSION\t"OpenSSH_?"/' version.h && \ 
     ./configure && \
     make && \
     make install
